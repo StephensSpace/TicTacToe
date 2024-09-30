@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    max-height: 100vh;
+}
+
+header {
+    text-align: center;
+    background-color: #1a1a1a;
+    /* Dunkler Hintergrund für Kontrast */
+    height: 250px;
+    /* Feste Höhe */
+    position: relative;
+    /* Für spätere Positionierung */
+    top: 0;
+    /* Direkt an den oberen Rand setzen */
+    margin: 0;
+    /* Kein margin */
+}
+
+.pointerNone {
+    pointer-events: none;
+}
+
+header h1 {
+    font-family: 'Raleway', sans-serif;
+    /* Graffiti-Schriftart */
+    font-size: 72px;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, violet);
+    color: white;
+    /* Neue Textfarbe für besseren Kontrast */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+    /* Starker Box-Shadow */
+    margin: 0;
+    line-height: 250px;
+    /* Vertikale Zentrierung durch Anpassung der Line-Height */
+}
+
+/* Anzeige des aktuellen Spielers */
+#current-player {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#current-player svg {
+    margin-right: 10px;
+    /* Abstand zwischen dem Symbol und dem Text */
+}
+
+/* Content und Spielfeld-Stile */
+#content {
+    display: flex;
+    flex-direction: column;
+    /* Vertikale Anordnung */
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 250px);
+    /* Platz für den Header lassen */
+    background-color: #ffd59a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.winning-line0 {
+    transform: skew(45deg);
+    position: absolute;
+    background: green;
+    border-radius: 8px;
+}
+
+.winning-line1 {
+    transform: skew(-45deg);
+    position: absolute;
+    background: green;
+    border-radius: 8px;
+}
+
+
+
+/* Tabelle und Zellen-Stile */
+table {
+    border-collapse: collapse;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* Box-Shadow mit Blur-Effekt fürs Spielfeld */
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    /* Weißer Hintergrund für das Spielfeld */
+}
+
+td.empty {
+    background-color: lightgrey;
+}
+
+td.cross {
+    color: blue;
+}
+
+td.circle {
+    color: red;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    /* Grüner Hintergrund */
+    color: white;
+    /* Weißer Text */
+    border: none;
+    /* Keine Umrandung */
+    border-radius: 5px;
+    /* Abgerundete Ecken */
+}
+
+button:hover {
+    background-color: #45a049;
+    /* Dunkleres Grün bei Hover */
+}
